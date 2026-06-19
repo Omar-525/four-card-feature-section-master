@@ -1,0 +1,214 @@
+/* Foont */
+@font-face {
+  font-family: "Poppins-light";
+  src: url(../font/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-bold";
+  src: url(../font/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-black";
+  src: url(../font/Poppins-Black.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Primary */
+:root {
+  --Foont-Light: "Poppins-light";
+  --Foont-Bold: "Poppins-bold";
+  --Foont-Black: "Poppins-black";
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+}
+
+/* Neutral */
+:root {
+  --Grey500: rgb(76, 78, 97);
+  --Grey400: rgb(105, 112, 120);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* Body */
+body {
+  width: 100%;
+  background-color: var(--White);
+}
+
+/* Main */
+main {
+  max-width: 90%;
+  width: 100%;
+  height: auto;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.intro {
+  margin-top: 10vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro h1 {
+  font-family: var(--Foont-Light);
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--Grey400);
+}
+
+.intro h2 {
+  font-family: var(--Foont-Bold);
+  font-size: 30px;
+  color: var(--Grey500);
+}
+
+.intro .body {
+  width: 60%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: var(--Foont-Light);
+  margin-top: 2vh;
+  color: var(--Grey400);
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.cards .card {
+  background: var(--White);
+  border-radius: 8px;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-top: 4px solid;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 20px 20px;
+}
+
+.card img {
+  width: 56px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: var(--Grey500);
+  font-family: var(--Foont-Bold);
+}
+
+.card p {
+  color: var(--Grey400);
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: var(--Foont-Light);
+  font-weight: 600;
+  margin: 0;
+}
+
+.cards .supervisor {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-top-color: var(--Cyan);
+}
+
+.cards .team-builder {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-top-color: var(--Red);
+}
+
+.cards .karma {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border-top-color: var(--Orange);
+}
+
+.cards .calculator {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  border-top-color: var(--Blue);
+}
+
+.attribution {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 60px 24px;
+  }
+
+  .intro {
+    margin: 0;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro .body {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .cards .supervisor,
+  .cards .calculator {
+    grid-row: span 1 !important;
+    grid-column: 1 !important;
+    order: 0;
+  }
+
+  .cards .team-builder,
+  .cards .karma {
+    grid-column: 1 !important;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
