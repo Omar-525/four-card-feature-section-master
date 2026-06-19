@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK/hub)
-- Live Site URL: [View Live Site](https://omar-525.github.io/four-card-feature-section/)
+- Solution URL: [My Solution](https://github.com/Omar-525/four-card-feature-section-master)
+- Live Site URL: [View Live Site](https://omar-525.github.io/four-card-feature-section-master/)
 
 ## My process
 
